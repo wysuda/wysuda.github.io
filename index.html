@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="sora">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -46,7 +46,7 @@
 			<img src="https://i1.hdslb.com/bfs/face/13ea26f10e5ae49d651378e75e58c48de88be370.jpg@87w_88h_1c_100q.webp" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">sora</a></h1>
 		</hgroup>
 		
 
@@ -102,7 +102,7 @@
 				<img src="https://i1.hdslb.com/bfs/face/13ea26f10e5ae49d651378e75e58c48de88be370.jpg@87w_88h_1c_100q.webp" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">sora</h1>
 			</hgroup>
 			
 			
@@ -147,6 +147,86 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Java学习记录（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/14/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">Java学习记录（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/14/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-01-14T14:16:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="记录我的Java学习历程"><a href="#记录我的Java学习历程" class="headerlink" title="记录我的Java学习历程"></a>记录我的Java学习历程</h1><h3 id="关于台球小程序的记录"><a href="#关于台球小程序的记录" class="headerlink" title="关于台球小程序的记录"></a><strong>关于台球小程序的记录</strong></h3><p><strong>首先来贴一下源码</strong></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.*;</span><br><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BallGame</span> <span class="keyword">extends</span> <span class="title">JFrame</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	Image ball = Toolkit.getDefaultToolkit().getImage(<span class="string">"images/ball.png"</span>);</span><br><span class="line">	Image desk = Toolkit.getDefaultToolkit().getImage(<span class="string">"images/desk.jpg"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">double</span> x=<span class="number">100</span>;</span><br><span class="line">	<span class="keyword">double</span> y=<span class="number">100</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">double</span> degree = <span class="number">3.14</span>/<span class="number">3</span>;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"画一次"</span>);</span><br><span class="line">		g.drawImage(desk, <span class="number">0</span>, <span class="number">0</span>, <span class="keyword">null</span>);</span><br><span class="line">		g.drawImage(ball, (<span class="keyword">int</span>)x, (<span class="keyword">int</span>)y, <span class="keyword">null</span>);</span><br><span class="line">		</span><br><span class="line">		x = x + <span class="number">10</span>*Math.cos(degree);</span><br><span class="line">		y = y + <span class="number">10</span>*Math.sin(degree);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(y&gt;<span class="number">380</span>||y&lt;<span class="number">50</span>)&#123;</span><br><span class="line">			degree=-degree;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>||x&gt;<span class="number">800</span>)&#123;</span><br><span class="line">			degree = <span class="number">3.14</span>-degree;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">launchFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">		setSize(<span class="number">853</span>,<span class="number">448</span>);</span><br><span class="line">		setLocation(<span class="number">50</span>,<span class="number">50</span>);</span><br><span class="line">		setVisible(<span class="keyword">true</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">			repaint();</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				Thread.sleep(<span class="number">40</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		BallGame game = <span class="keyword">new</span> BallGame();</span><br><span class="line">		game.launchFrame();</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="华丽的分割线"><a href="#华丽的分割线" class="headerlink" title="华丽的分割线"></a><strong>华丽的分割线</strong></h2><hr>
+<h3 id="程序功能"><a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h3><p><strong>小球撞到边缘以后，按入射角等于反射角继续前进</strong></p>
+<h3 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h3><p><strong>主要学习窗口的生成和图片的显示</strong></p>
+<h3 id="再来看两张运行时的截图"><a href="#再来看两张运行时的截图" class="headerlink" title="再来看两张运行时的截图"></a>再来看两张运行时的截图</h3><p><img src="D:/eclipse/%E4%BB%BB%E5%8A%A1/Tableball/images/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE%E4%B8%80.png" alt="运行截图一" title="运行截图一"></p>
+<p><img src="D:/eclipse/%E4%BB%BB%E5%8A%A1/Tableball/images/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE%E4%BA%8C.png" alt="运行截图二" title="运行截图二"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/14/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-这是第一次使用hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -215,68 +295,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/26/%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-my-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/26/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/26/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-12-25T16:10:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/26/my-first-blog/">展开全文 >></a>
         </p>
       
 
@@ -391,7 +409,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2020 sora
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -472,6 +490,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">初次使用md</a>
